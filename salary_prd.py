@@ -6,7 +6,7 @@ model = joblib.load("salary_prd.pkl")
 
 # Streamlit app title
 st.title(" 💼 Employee Salary Prediction 🏆")
-st.image("salary_prd.jpeg", width=600)
+st.image("salary prd_3.jpeg", width=600)
 # Streamlit app description
 st.markdown("""
     <style>
@@ -143,11 +143,19 @@ Job_Title_value = {
 }[Job_Title]
 
 # Prediction
+# Prediction output
 if st.button("Predict Salary"):
     try:
         # Perform prediction using the trained model
         result = model.predict([[Age, Years_of_Experience, Gender_value, Education_Level_value, Job_Title_value]])
-        st.success(f"Estimated Salary: {result[0]:,.2f}")
+        
+        # Display the result with custom styling
+        st.markdown(f"""
+            <h2 style="color: #4CAF50; text-align: center;">
+                Predicted Estimated Salary: ₹ <span style="font-weight: bold; font-size: 36px;">{result[0]:,.2f}</span>
+            </h2>
+        """, unsafe_allow_html=True)
     except Exception as e:
         st.error(f"Error: {e}")
+
 
