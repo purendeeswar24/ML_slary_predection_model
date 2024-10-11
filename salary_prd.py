@@ -151,7 +151,7 @@ else:
         'UX Designer': 163, 'Sales Manager': 164, 'Director of Finance': 165, 'Senior Operations Manager': 166,
         'Senior HR Manager': 167, 'Operations Manager': 168, 'Administrative Assistant': 169, 'Senior Graphic Designer': 170,
         'Data Analyst': 171, 'Junior Social Media Manager': 172, 'Software Project Manager': 173
-    }[Job_Title]
+    }
 
     # Button to predict the salary
     if st.button("Predict Salary"):

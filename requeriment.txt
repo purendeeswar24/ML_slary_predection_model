@@ -10,4 +10,4 @@ scikit-learn == 1.39.0
 
 streamlit == 1.39.0
 
-joblib == 1.4.2
+joblib
